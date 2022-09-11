@@ -9,6 +9,21 @@
 </head>
 
 <body>
+    <h1>論文詳細</h1>
+
+    タイトル: {{ $article->title }}
+
+    <p>
+        {{ $article->body }}
+    </p>
+
+    <button onclick="location.href='/articles'">一覧へ戻る</button>
+    <button onclick="location.href='/articles/edit'">編集する</button>
+    <button onclick="location.href='/articles'">削除する</button>
+
+
+
+
 
 </body>
 
