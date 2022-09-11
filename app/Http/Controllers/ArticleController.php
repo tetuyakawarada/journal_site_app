@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\models\Article;
 use Illuminate\Http\Request;
-// Articalクラスを読み込む          ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-// use App\Models\Articalw;
 
 
 class ArticleController extends Controller
