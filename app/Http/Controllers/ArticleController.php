@@ -34,10 +34,23 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //
+        // インスタンスの作成
+        $article = new Article;
+
+        // 値の用意
+        $article->title = $request->title;
+        $article->body = $request->body;
+
+        // インスタンスに値を設定して保存
+        $article->save();
+
+        // 登録したらindexに戻る
+        return redirect('/articles');
     }
+
 
     /**
      * Display the specified resource.
