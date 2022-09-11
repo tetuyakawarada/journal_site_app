@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\models\Article;
 use Illuminate\Http\Request;
+// Articalクラスを読み込む          ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// use App\Models\Articalw;
+
 
 class ArticleController extends Controller
 {
@@ -108,8 +111,16 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function destroy($id)
     {
-        //
+        //インスタンスの作成(データ取得)
+        $article = Article::find($id);
+
+        // データ削除
+        $article->delete();
+        // 削除したらindexに戻る
+        return redirect('/articles');
     }
 }
