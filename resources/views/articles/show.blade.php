@@ -18,7 +18,7 @@
     </p>
 
     <button onclick="location.href='/articles'">一覧へ戻る</button>
-    <button onclick="location.href='/articles/edit'">編集する</button>
+    <button onclick="location.href='/articles/{{ $article->id }}/edit'">編集する</button>
     <button onclick="location.href='/articles'">削除する</button>
 
 
